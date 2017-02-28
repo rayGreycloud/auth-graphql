@@ -9,17 +9,16 @@ const AuthService = require('../services/auth');
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    signUp: {
+    signup: {
       type: UserType,
       args: {
-        email: { GraphQLString },
-        password: { GraphQLString }
+        email: { type: GraphQLString },
+        password: { type: GraphQLString }
       },
-      resolve(parentValue, args, request) {
-        // Destructuring here to keep args as parameter
-        const { email, password } = args;
+      resolve(parentValue, { email, password }, req) {
+
         // async process so return promise
-        return AuthService.signUp({ email, password, req: request });
+        return AuthService.signup({ email, password, req });
       }
     }
   }
