@@ -20,6 +20,15 @@ const mutation = new GraphQLObjectType({
         // async process so return promise
         return AuthService.signup({ email, password, req });
       }
+    },
+    logout: {
+      type: UserType,
+      resolve(parentValue, args, req) {
+        // Save reference because req.user deleted on logout()
+        const { user } = req;
+        req.logout();
+        return user;
+      }
     }
   }
 });
