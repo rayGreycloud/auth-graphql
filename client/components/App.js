@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 
 // Functional component because only showing header and children
-const App = (props) = {
+const App = (props) => {
   return (
     <div>
       <Header />
