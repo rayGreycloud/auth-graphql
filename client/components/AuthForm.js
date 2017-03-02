@@ -21,7 +21,7 @@ class AuthForm extends Component {
             />
           </div>
           <div className="input-field">
-            <label>Password></label>
+            <label>Password</label>
             <input
               value={this.state.password}
               onChange={e => this.setState({
