@@ -13,7 +13,14 @@ class Header extends Component {
       return <div>Logout</div>;
     } else {
       return (
-        <div>You're not signed in</div>
+        <div>
+          <li>
+            <Link to="/signup">Signup</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </div>
       );
     }
   }
