@@ -4,7 +4,7 @@ import Header from './Header';
 // Functional component because only showing header and children
 const App = (props) => {
   return (
-    <div>
+    <div className="container">
       <Header />
       {props.children}
     </div>
