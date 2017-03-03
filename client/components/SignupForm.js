@@ -12,11 +12,13 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <h3>Sign Up</h3>;
-      <AuthForm
-        errors={[]}
-        onSubmit={this.onSubmit.bind(this)}
-      />
+      <div>
+        <h3>Sign Up</h3>
+        <AuthForm
+          errors={[]}
+          onSubmit={this.onSubmit.bind(this)}
+        />
+      </div>
     );
   }
 }
