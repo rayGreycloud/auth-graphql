@@ -18,7 +18,7 @@ class AuthForm extends Component {
   render() {
     return (
       <div className="row">
-        <form onSubmit={this.onSubmit.bind(this)} className="col s4">
+        <form onSubmit={this.onSubmit.bind(this)} className="col s6">
           <div className="input-field">
             <input
               placeholder="Email"
